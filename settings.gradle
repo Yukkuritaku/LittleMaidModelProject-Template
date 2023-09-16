@@ -1,9 +1,16 @@
 pluginManagement {
+	resolutionStrategy {
+		eachPlugin {
+			if(requested.id.toString() == "io.github.yukkuritaku.maid-gradle")
+				useModule("com.github.Yukkuritaku.maid-gradle:io.github.yukkuritaku.maid-gradle.gradle.plugin:0.4")
+		}
+	}
 	repositories {
 		maven {
 			name = 'Fabric'
 			url = 'https://maven.fabricmc.net/'
 		}
+		maven { url = 'https://jitpack.io' }
 		mavenCentral()
 		gradlePluginPortal()
 	}
