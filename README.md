@@ -1,4 +1,4 @@
-# Fabric Example Mod
+## メイドさんモデル作成のテンプレート
 
 ## Setup
 
