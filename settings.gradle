@@ -2,7 +2,7 @@ pluginManagement {
 	resolutionStrategy {
 		eachPlugin {
 			if(requested.id.toString() == "io.github.yukkuritaku.maid-gradle")
-				useModule("com.github.Yukkuritaku.maid-gradle:io.github.yukkuritaku.maid-gradle.gradle.plugin:0.7")
+				useModule("com.github.Yukkuritaku.maid-gradle:io.github.yukkuritaku.maid-gradle.gradle.plugin:1.0")
 		}
 	}
 	repositories {
