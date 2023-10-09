@@ -75,13 +75,6 @@ repositories {
 }
 
 loom {
-	runs{
-		client{
-			property("lmmd.dev.classes", "${sourceSets.main.output.getClassesDirs().asPath}")
-			property("lmmd.dev.resources", "${sourceSets.main.output.getResourcesDir().absolutePath}")
-			client()
-		}
-	}
 	mods {
 		"modid" {
 			sourceSet sourceSets.main
