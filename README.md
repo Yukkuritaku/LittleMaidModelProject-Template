@@ -1,5 +1,7 @@
 # メイドさんモデル作成のテンプレート
 
+(もっと詳しい説明は後に書く予定です)
+
 ## セットアップ
 
 セットアップの手順はIDEによって違うので、[Fabricのwikiページ](https://fabricmc.net/wiki/ja:tutorial:setup)を参照してください。
