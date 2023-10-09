@@ -60,14 +60,18 @@ repositories {
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
 	maven {
-		//Cloth Config Api and Architectury mod
+		//Cloth Config ApiとArchitectury mod
 		url = 'https://maven.shedaniel.me/'
 	}
 	maven {
+		//ModMenu
 		name = 'ModMenu'
 		url = 'https://maven.terraformersmc.com/releases/'
 	}
-	maven { url 'https://jitpack.io' }
+	//LittleMaidModelDevelopment用
+	maven {
+		url = 'https://jitpack.io'
+	}
 }
 
 loom {
@@ -89,21 +93,25 @@ dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-	// Parchmentマッピング用
+	// Parchment(公式)マッピング用
 	/*mappings loom.layered(){
 		officialMojangMappings()
 		parchment("org.parchmentmc.data:parchment-${project.minecraft_version}:${project.parchment_mappings}@zip")
 	}*/
 
+	// Fabric Loader
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	// Architectury
 	modApi "dev.architectury:architectury-fabric:${project.architectury_version}"
+	// ModMenu
 	modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
+	// Cloth Config Api
 	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_api_version}") {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
+	// LittleMaidModelDevelopment
 	modImplementation("com.github.Yukkuritaku:LittleMaidModelDevelopment:${project.littlemaiddevelopment_version}"){transitive = false}
 	// Uncomment the following line to enable the deprecated Fabric API modules. 
 	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
@@ -129,7 +137,6 @@ java {
 	// if it is present.
 	// If you remove this line, sources will not be generated.
 	withSourcesJar()
-
 	sourceCompatibility = JavaVersion.VERSION_17
 	targetCompatibility = JavaVersion.VERSION_17
 }
