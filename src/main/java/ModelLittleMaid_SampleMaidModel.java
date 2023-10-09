@@ -38,7 +38,6 @@ import net.sistr.littlemaidmodelloader.maidmodel.ModelLittleMaid_SR2;
  * モデルは同じでテクスチャは別のものを設定できる
  * <p>
  * メイドさん選択画面でdemoModel_samplemaidmodelが表示される
- *
  */
 public class ModelLittleMaid_SampleMaidModel extends ModelLittleMaid_SR2 {
 
