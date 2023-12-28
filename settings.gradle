@@ -1,19 +1,24 @@
 pluginManagement {
-	resolutionStrategy {
-		eachPlugin {
-			if(requested.id.toString() == "io.github.yukkuritaku.maid-gradle")
-				useModule("com.github.Yukkuritaku.maid-gradle:io.github.yukkuritaku.maid-gradle.gradle.plugin:1.0")
-		}
-	}
-	repositories {
-		maven {
-			name = 'Fabric'
-			url = 'https://maven.fabricmc.net/'
-		}
-		maven { url = 'https://jitpack.io' }
-		mavenCentral()
-		gradlePluginPortal()
-	}
+    repositories {
+        maven { url = 'https://jitpack.io' }
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    resolutionStrategy {
+        eachPlugin {
+            switch (requested.id.toString()) {
+                case "io.github.yukkuritaku.maid-gradle": {
+                    useModule("com.github.Yukkuritaku.maid-gradle:io.github.yukkuritaku.maid-gradle.gradle.plugin:${requested.version}")
+                    break
+                }
+                default: break
+            }
+        }
+    }
 }
 
 rootProject.name = "LittleMaidModelProject"
