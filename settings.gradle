@@ -5,20 +5,11 @@ pluginManagement {
             name = 'Fabric'
             url = 'https://maven.fabricmc.net/'
         }
+        // TODO gradlePluginPortalにLittleMaid-Loomが追加されたら消す
+        mavenLocal()
         mavenCentral()
         gradlePluginPortal()
     }
-    resolutionStrategy {
-        eachPlugin {
-            switch (requested.id.toString()) {
-                case "io.github.yukkuritaku.maid-gradle": {
-                    useModule("com.github.Yukkuritaku.maid-gradle:io.github.yukkuritaku.maid-gradle.gradle.plugin:${requested.version}")
-                    break
-                }
-                default: break
-            }
-        }
-    }
 }
 
-rootProject.name = "LittleMaidModelProject"
+rootProject.name = "LittleMaidModelProject-Template"

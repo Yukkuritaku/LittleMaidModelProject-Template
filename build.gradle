@@ -2,12 +2,12 @@ import java.util.zip.Deflater
 import java.util.zip.ZipEntry
 
 plugins {
-	id 'fabric-loom' version '1.4-SNAPSHOT'
-	id 'io.github.yukkuritaku.maid-gradle' version '1.1'
+	id 'fabric-loom' version '1.6-SNAPSHOT'
+	id 'io.github.yukkuritaku.littlemaid-loom' version '1.0.1'
 	id 'maven-publish'
 }
 
-maidgradle {
+littlemaidloom {
 	//マイクラバージョン
 	minecraftVersion("${project.minecraft_version}")
 	//LittleMaidModelLoaderのバージョン
@@ -68,10 +68,12 @@ repositories {
 		name = 'ModMenu'
 		url = 'https://maven.terraformersmc.com/releases/'
 	}
-	//LittleMaidModelDevelopment用
-	maven {
+	//LittleMaidModel-Development
+	//TODO LittleMaidModel-Developmentがmavenに公開されたら削除する
+	mavenLocal()
+	/*maven {
 		url = 'https://jitpack.io'
-	}
+	}*/
 }
 
 loom {
@@ -105,7 +107,7 @@ dependencies {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
 	// LittleMaidModelDevelopment
-	modImplementation("com.github.Yukkuritaku:LittleMaidModelDevelopment:${project.littlemaiddevelopment_version}"){transitive = false}
+	modImplementation("com.github.yukkuritaku:littlemaidmodel-development:${project.littlemaiddevelopment_version}"){transitive = false}
 	// Uncomment the following line to enable the deprecated Fabric API modules. 
 	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
 
