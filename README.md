@@ -2,7 +2,7 @@
 
 (もっと詳しい説明は後に書く予定です)
 
-![Preview Screenshot](https://github.com/Yukkuritaku/LittleMaidModelProject-Template/tree/1.20/docs/preview_screenshot.png "LittleMaid Preview")
+![Preview Screenshot](https://raw.githubusercontent.com/Yukkuritaku/LittleMaidModelProject-Template/1.20/docs/preview_screenshot.png "LittleMaid Preview")
 
 ## セットアップ
 
