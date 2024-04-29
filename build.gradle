@@ -3,7 +3,7 @@ import java.util.zip.ZipEntry
 
 plugins {
 	id 'fabric-loom' version '1.6-SNAPSHOT'
-	id 'io.github.yukkuritaku.littlemaid-loom' version '1.0.1'
+	id 'io.github.yukkuritaku.littlemaid-loom' version '1.0.3'
 	id 'maven-publish'
 }
 
@@ -59,21 +59,27 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+
+	//Cloth Config ApiとArchitectury mod
 	maven {
-		//Cloth Config ApiとArchitectury mod
+		name = "shedaniel maven"
 		url = 'https://maven.shedaniel.me/'
 	}
+	//ModMenu
 	maven {
-		//ModMenu
-		name = 'ModMenu'
+		name = 'terraformersmc maven'
 		url = 'https://maven.terraformersmc.com/releases/'
 	}
-	//LittleMaidModel-Development
-	//TODO LittleMaidModel-Developmentがmavenに公開されたら削除する
-	mavenLocal()
-	/*maven {
+	// LittleMaidModel-Development
+	maven {
+		name = "jitpack"
 		url = 'https://jitpack.io'
-	}*/
+	}
+	// DevAuth用、要らなかったら消してください
+	maven {
+		name = "djtheredstoner maven"
+		url = "https://pkgs.dev.azure.com/djtheredstoner/DevAuth/_packaging/public/maven/v1"
+	}
 }
 
 loom {
@@ -104,10 +110,17 @@ dependencies {
 	modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
 	// Cloth Config Api
 	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_api_version}") {
-		exclude(group: "net.fabricmc.fabric-api")
+		exclude group: "net.fabricmc.fabric-api"
 	}
 	// LittleMaidModelDevelopment
-	modImplementation("com.github.yukkuritaku:littlemaidmodel-development:${project.littlemaiddevelopment_version}"){transitive = false}
+	modImplementation("com.github.Yukkuritaku:LittleMaidModel-Development:${project.littlemaiddevelopment_version}"){
+		transitive = false
+	}
+
+	// DevAuth用、開発環境でもリアルのマイクラアカウントでログインできるライブラリです。
+	// 要らなかったらこの次の行を削除してね
+	modRuntimeOnly("me.djtheredstoner:DevAuth-fabric:${project.devauth_version}")
+
 	// Uncomment the following line to enable the deprecated Fabric API modules. 
 	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
 
@@ -137,7 +150,7 @@ java {
 }
 
 jar {
-	from("LICENSE.txt") {
+	from("LICENSE") {
 		rename { "${it}_${project.base.archivesName.get()}"}
 	}
 }

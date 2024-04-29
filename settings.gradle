@@ -1,12 +1,9 @@
 pluginManagement {
     repositories {
-        maven { url = 'https://jitpack.io' }
         maven {
             name = 'Fabric'
             url = 'https://maven.fabricmc.net/'
         }
-        // TODO gradlePluginPortalにLittleMaid-Loomが追加されたら消す
-        mavenLocal()
         mavenCentral()
         gradlePluginPortal()
     }
