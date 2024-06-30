@@ -2,7 +2,7 @@
 
 ## 前提条件
 
-- Java 17以上(17が一番推奨)のJDK、インストーラーに関しては[Adoptium](https://adoptium.net/releases.html)にアクセスするとダウンロード出来ます。
+- Java 21以上(21が一番推奨)のJDK、いろんなJDKがあるので調べることをお勧めします。おすすめは[Adoptium](https://adoptium.net/releases.html)
 - 任意のJava IDE、例えば[Intellij IDEA](https://www.jetbrains.com/ja-jp/idea/download/?section=windows)(Community版推奨)、[Eclipse](https://www.eclipse.org/downloads/)など
 - マイクラ用のモデリングソフトウェア、例えば[Blockbench](https://www.blockbench.net/downloads)や[Tabula](https://www.curseforge.com/minecraft/mc-mods/tabula-minecraft-modeler)(1.12.2版推奨)など
 
@@ -34,4 +34,4 @@ Blockbenchの場合、左上のFile→モデルを開くか`Ctrl+o`キーで開�
 Tabulaの場合、modを導入した後にマイクラを閉じ、modsフォルダの中にあるtabulaフォルダーにModelLittleMaidBaseVer1.1.tblを入れ、再びマイクラを起動することでモデリング出来るようになります。
 
 ---
-ここまできたら開発環境の構築は完了です！　素敵なメイドさん作成ライフを！
+ここまできたら開発環境/モデリング環境の構築は完了です！　素敵なメイドさん作成ライフを！

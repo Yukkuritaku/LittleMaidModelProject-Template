@@ -2,8 +2,8 @@ import java.util.zip.Deflater
 import java.util.zip.ZipEntry
 
 plugins {
-	id 'fabric-loom' version '1.6-SNAPSHOT'
-	id 'io.github.yukkuritaku.littlemaid-loom' version '1.0.3'
+	id 'fabric-loom' version '1.7-SNAPSHOT'
+	id 'io.github.yukkuritaku.littlemaid-loom' version '1.0.4'
 	id 'maven-publish'
 }
 
@@ -136,7 +136,7 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.release.set(17)
+	it.options.release.set(21)
 	it.options.encoding = "UTF-8"
 }
 
@@ -145,8 +145,8 @@ java {
 	// if it is present.
 	// If you remove this line, sources will not be generated.
 	withSourcesJar()
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
 }
 
 jar {

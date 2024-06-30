@@ -6,6 +6,4 @@
 
 ## セットアップ
 
-セットアップの手順は[Setup.md](https://github.com/Yukkuritaku/LittleMaidModelProject-Template/blob/1.20/docs/Setup.md)を参照してください！
-
-マルチモデルの詳しい説明はSugarCoffee氏の[1.12.2little maid mob マルチモデルの作成](https://forum.civa.jp/viewtopic.php?f=31&t=386)を参照することをおすすめします！
+セットアップの手順は[Setup.md](https://github.com/Yukkuritaku/LittleMaidModelProject-Template/blob/1.20/docs/Setup.md)やSugarCoffee氏の[1.12.2little maid mob マルチモデルの作成](https://forum.civa.jp/viewtopic.php?f=31&t=386)を参照してください！
