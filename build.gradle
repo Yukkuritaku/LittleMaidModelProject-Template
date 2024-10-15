@@ -2,8 +2,8 @@ import java.util.zip.Deflater
 import java.util.zip.ZipEntry
 
 plugins {
-	id 'fabric-loom' version '1.7-SNAPSHOT'
-	id 'io.github.yukkuritaku.littlemaid-loom' version '1.0.4'
+	id 'fabric-loom' version '1.8-SNAPSHOT'
+	id 'io.github.yukkuritaku.littlemaid-loom' version '1.0.5'
 	id 'maven-publish'
 }
 
@@ -70,7 +70,7 @@ repositories {
 		name = 'terraformersmc maven'
 		url = 'https://maven.terraformersmc.com/releases/'
 	}
-	// LittleMaidModel-Development
+	// LittleMaidModelDevelopment
 	maven {
 		name = "jitpack"
 		url = 'https://jitpack.io'
